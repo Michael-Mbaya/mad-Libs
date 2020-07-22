@@ -25,13 +25,14 @@ $(document).ready(function() {
     var verbInput = $("input#verb").val();
     var nounInput = $("input#noun").val();
         //below the values of vars above(form-inputs) appended below
-      $(".person1").append(person1Input);
-      $(".person2").append(person2Input);
-      $(".animal").append(animalInput);
-      $(".exclamation").append(exclamationInput);
-      $(".verb").append(verbInput);
-      $(".noun").append(nounInput);
-        
+      $(".person1").text(person1Input);
+      $(".person2").text(person2Input);
+      $(".animal").text(animalInput);
+      $(".exclamation").text(exclamationInput);
+      $(".verb").text(verbInput);
+      $(".noun").text(nounInput);
+        //also above .text() instead of append
+        //so as to replace existing text not adding to it
       $("#story").show();
         
       event.preventDefault();   //prevent whole page refresh on submit
